@@ -1,0 +1,142 @@
+Mini-Assignment 1: Getting to Know You
+    Your first assignment is to write a small program that does the following. This will help you practice everything we just learned.
+
+    Create a variable to store your name.
+
+    Create another variable to store the year you were born.
+
+    Ask the user for their target company for the placement drive and store it in a variable.
+
+    Calculate your approximate current age (Current Year - Birth Year).
+
+    Print a summary message to the screen. It should look something like this:
+    "Hello, Arjun! You are approximately 21 years old. We will work hard to get you into Google."
+
+
+Mini-Assignment 2: The Number Analyzer
+    Let's combine what we've learned. Write a program that does the following:
+
+    Asks the user to enter one integer.
+
+    Analyzes the number and prints two things about it:
+
+    First, it should state if the number is positive, negative, or zero.
+
+    Second, it should state if the number is even or odd.
+
+Mini-Assignment 3: Loops and Logic Challenges
+    Here are a few problems to solve. These are very common in technical interviews, so take your time and think them through!
+
+    Question 1: The FizzBuzz Challenge (A Classic Placement Question)
+    Write a program that prints numbers from 1 to 100, each on a new line.
+
+    If the number is a multiple of 3, print "Fizz" instead of the number.
+
+    If the number is a multiple of 5, print "Buzz" instead of the number.
+
+    If the number is a multiple of both 3 and 5, print "FizzBuzz".
+    (Hint: The order of your if/elif conditions matters! Check for the most specific case first.)
+
+    Question 2: The Input Validator
+    Write a program that continuously asks the user to "Enter a positive number: ".
+
+    The loop should continue asking as long as the user enters a number that is less than or equal to 0.
+
+    Once the user enters a positive number, the program should print a confirmation message like "Success! 15 is a positive number." and then terminate.
+    (Hint: A while loop is perfect for this.)
+
+    Question 3: The Summation Challenge
+    Write a program that asks the user for an integer n. The program should then calculate and display the sum of all numbers from 1 up to and including n.
+
+    For example, if the user enters 5, the program should calculate 1 + 2 + 3 + 4 + 5 and print The sum is: 15.
+    (Hint: You'll need a variable to keep track of the total sum. Initialize it to 0 before the loop starts.)
+
+Workout problems:
+        -----
+
+        The Pyramid Builder 
+
+        **Your task** is to write a program that takes an integer `n` as input and prints a right-angled triangle pattern of asterisks (`*`) with `n` rows.
+
+        **Example:**
+
+        * **Input:** `5`
+        * **Expected Output:**
+            ```
+            *
+            **
+            ***
+            ****
+            *****
+            ```
+
+        -----
+
+        The Prime Number Checker 
+
+        **Your task** is to write a program that takes an integer `n` as input and determines if it's a **prime number**. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+        **Examples:**
+
+        * **Input:** `7`
+        * **Expected Output:** `7 is a prime number.`
+        * **Input:** `10`
+        * **Expected Output:** `10 is not a prime number.`
+
+        -----
+
+
+        **1. Sum of All Numbers**
+        Write a Python program that takes a list of numbers, like `[1, 5, 2, 9, 4]`, and calculates the sum of all the numbers in the list using a `for` loop.
+
+
+        -----
+
+        **2. Countdown**
+        Write a program that uses a `while` loop to print a countdown from 10 down to 1, and then prints "Liftoff\!".
+
+        -----
+
+        **3. Print Even Numbers**
+        Write a program that prints all the even numbers from 1 to 20.
+
+        -----
+
+        **4. Find the Maximum Number**
+        Given a list of numbers, `[45, 67, 23, 89, 12, 55]`, write a program to find the largest number in the list without using the built-in `max()` function.
+
+        -----
+
+        **5. FizzBuzz Challenge** 
+        This is a classic programming challenge. Write a program that prints numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number. For multiples of five, print "Buzz". For numbers which are multiples of both three and five, print "FizzBuzz".
+
+        -----
+
+        **6. Count the Vowels**
+        Write a program that takes a string (e.g., "Hello World") and counts the number of vowels (`a`, `e`, `i`, `o`, `u`) in it. The check should be case-insensitive.
+
+        -----
+
+        **7. Prime Number Checker**
+        Write a function that takes a number as input and prints whether it is a prime number or not. A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.
+
+        -----
+
+        **8. Print a Triangle Pattern**
+        Write a program using nested `for` loops to print the following pattern:
+
+        ```
+        *
+        **
+        ***
+        ****
+        *****
+        ```
+
+        -----
+
+        **9. Simple Password Guessing Game**
+        Create a simple game where the program has a secret password. The user gets three attempts to guess the password. Use a `while` loop that runs as long as the user's guess is incorrect AND they have attempts remaining. Provide feedback if the guess is wrong and break the loop if they guess correctly.
+
+        -----
+
