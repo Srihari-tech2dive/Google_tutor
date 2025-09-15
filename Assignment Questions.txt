@@ -74,3 +74,75 @@ Mini-Assignment 4: The To-Do List Manager
         If the user enters "exit": break the loop to end the program.
 
         This is a bigger challenge, but it combines everything you've learned so far! Take your time, and let me see your code when you're ready.
+
+
+
+Mini-Assignment 4.5: The Simple Contact Book
+
+    Your goal is to create a program to manage a list of contacts. Each contact will be stored as a simple string in the format `"Name:PhoneNumber"`.
+
+    **Your program should:**
+
+    1.  Start with an empty list called `contacts`.
+    2.  Use a `while True` loop to continuously show the user a menu of options.
+    3.  The menu should ask the user to enter one of these commands: "**add**", "**view**", "**search**", or "**exit**".
+
+        * If the user enters "**add**":
+            * Ask for the person's **name**.
+            * Ask for the person's **phone number**.
+            * Combine them into a single string like `"Alice:1234567890"` and **add** it to your `contacts` list.
+
+        * If the user enters "**view**":
+            * If the list is empty, print a message like "Your contact book is empty."
+            * Otherwise, **loop** through the `contacts` list and print each contact on a new line.
+
+        * If the user enters "**search**":
+            * Ask the user for a **name** to search for.
+            * **Loop** through your `contacts` list. For each contact string, check if the search name is in that string.
+            * If you find a match, print the full contact details (e.g., `"Found: Alice:1234567890"`).
+            * If you loop through the entire list and find no match, print a "Contact not found" message.
+
+        * If the user enters "**exit**":
+            * **Break** the loop to end the program.
+
+
+Mini-Assignment 4.7: The Simple Expense Tracker
+    Your goal is to build a basic program that allows a user to track their expenses. The program will keep a running list of expense amounts and be able to calculate the total.
+
+    Your program should:
+
+    Start with an empty list called expenses.
+
+    Use a while True loop to create a menu that asks the user to enter one of the following commands: "add", "show", or "exit".
+
+    If the user enters "add":
+
+    Ask the user for an expense amount (e.g., "Enter the amount:").
+
+    You must convert this input into a number. Use float() to allow for decimal values (like 25.50).
+
+    Challenge: What happens if the user types "hello" instead of a number? Your program will crash. To prevent this, wrap your input conversion in a try-except block.
+
+    Python
+
+    try:
+        amount = float(input("Enter the amount: "))
+        expenses.append(amount)
+        print(f"Added expense: ${amount:.2f}")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+    If the user enters "show":
+
+    If the expenses list is empty, print "You have no expenses yet."
+
+    Otherwise:
+
+    Print a header like "--- Your Expenses ---".
+
+    Loop through the expenses list and print each one.
+
+    After the loop, calculate the total of all expenses and print it (e.g., "Total: $150.75").
+
+    If the user enters "exit":
+
+    Print a final message like "Goodbye!" and break the loop.
