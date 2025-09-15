@@ -146,3 +146,115 @@ Mini-Assignment 4.7: The Simple Expense Tracker
     If the user enters "exit":
 
     Print a final message like "Goodbye!" and break the loop.
+
+Mini-Assignment 5: The Student Report Card
+
+    Let's use a dictionary to store a student's academic performance and then generate a report card.
+
+    Your task:
+
+    Create a dictionary named report.
+
+    Add the following key-value pairs to it:
+
+    "student_name": "Rohan"
+
+    "roll_number": 101
+
+    "subjects": The value for this key should be another dictionary. This inner dictionary will store subject names as keys and marks as values:
+
+    {
+    "Math": 85,
+    "Science": 92,
+    "English": 78,
+    "History": 88
+    }
+    Your program should then do the following:
+
+    Calculate the total marks by looping through the subjects dictionary.
+
+    Calculate the average percentage. Assume each subject is out of 100. The average is simply the total marks divided by the number of subjects.
+
+    Finally, print a formatted report card that looks like this:
+
+    Expected Output:
+
+    --- REPORT CARD ---
+    Student Name: Rohan
+    Roll Number:  101
+    ---------------------
+    SUBJECT      MARKS
+    Math         85
+    Science      92
+    English      78
+    History      88
+    ---------------------
+    Total Marks:  343
+    Average:      85.75%
+    ---------------------
+
+Question 1: The User Profile Updater
+    You are given a dictionary representing a user's profile. Your task is to access and modify it.
+
+    Starting Code:
+
+    Python
+
+    user_profile = {
+        "username": "coder_suresh",
+        "email": "suresh@example.com",
+        "location": {
+            "city": "Chennai",
+            "country": "India"
+        }
+    }
+    Tasks:
+
+    Access and print the user's current city.
+
+    Update the user's email to "suresh.dev@example.com".
+
+    Add a new key-value pair to the profile: "skills" should be a list containing "Python", "Data Structures", and "SQL".
+
+    Print the final, updated user_profile dictionary.
+
+Question 2: The Inventory Value Calculator
+    You have a dictionary representing a store's inventory. The keys are item names, and the values are another dictionary containing the price and quantity of that item.
+
+    Starting Code:
+
+    Python
+
+    inventory = {
+        "Laptop": {"price": 80000, "quantity": 10},
+        "Mouse": {"price": 1500, "quantity": 50},
+        "Keyboard": {"price": 2500, "quantity": 30}
+    }
+    Task:
+    Calculate the total value of the entire inventory. The value of a single item is its price * quantity. You need to do this for all items and sum them up.
+
+    Expected Output:
+
+    The total value of the inventory is: 950000
+    
+Question 3: The Student Search (Challenge)
+    This is a very common and important data structure: a list of dictionaries. Your task is to search through this list to find a specific student.
+
+    Starting Code:
+
+    Python
+
+    students = [
+        {"id": 101, "name": "Kavya", "grade": 88},
+        {"id": 102, "name": "Vijay", "grade": 92},
+        {"id": 103, "name": "Lakshmi", "grade": 75}
+    ]
+    Tasks:
+
+    Ask the user to enter a student id to search for.
+
+    Loop through the students list. For each student dictionary in the list, check if its "id" value matches the one the user entered.
+
+    If you find a match, print the student's name and grade (e.g., "Found Student: Vijay, Grade: 92") and stop the search.
+
+    If the loop finishes and you haven't found a student with that ID, print "Student not found.".

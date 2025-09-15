@@ -32,82 +32,115 @@ for i in range(1,n+1):
   sum+=i
 print(sum)
 
+
 #Mini-Assignment 4: The To-Do List Manager
 
-
-# try
-# tasks = [ ]
-# menu_list=["add","view","remove","exit"]
-# while True :
-#   menu =input("Enter any one: add,\nview,\nremove,\nexit:\n").lower()
-#   for i in menu:
-#     if menu=="add":
-#       new=input("Enter new task:")
-#       tasks.append(new)
-#     elif menu=="view":
-#       for t in tasks:
-#         if tasks==0:
-#           print("Your to-do list is empty")
-#         else:
-
-#           print(t)
-#     elif menu=="remove":
-#       print("The tasks are",tasks)
-#       delete=int(input("The task you want to remove(say the position of it):"))
-#       if delete<0 or delete>=len(tasks):
-#         print("Invalid position")
-#       else:
-#         tasks.remove(delete)
-#     elif menu=="exit":
-#       break
-#     else:
-#       print("Invalid input")
+tasks = [ ]
+menu_list=["add","view","remove","exit"]
+while True :
+    menu =input("Enter any one: add,\nview,\nremove,\nexit:\n").lower()
+    for i in menu:
+        if menu=="add":
+            new=input("Enter new task:")
+            tasks.append(new)
+        elif menu=="view":
+            for t in tasks:
+                if tasks==0:
+                    print("Your to-do list is empty")
+                else:
+                    print(t)
+        elif menu=="remove":
+            print("The tasks are",tasks)
+            delete=int(input("The task you want to remove(say the position of it):"))
+            if delete<0 or delete>=len(tasks):
+                print("Invalid position")
+            else:
+                tasks.remove(delete)
+        elif menu=="exit":
+            break
+        else:
+            print("Invalid input")
 
 
-tasks = [] 
+
+#Mini-Assignment 4.5: The Simple Contact Book
+
+contacts=[ ]
+while True:
+  user_choice = input("\nEnter 'add', 'view', 'search', or 'exit': ").lower()
+  if user_choice=="add":
+    name=input("Enter the person name:")
+    phone_number=input("Enter the contact number:")
+    combine=f"{name}:{phone_number}"
+    print(combine)
+    contacts.append(combine)
+    # break
+  elif user_choice=="view":
+    if not contacts:
+      print("Your contact book is empty.")
+      # break
+    else:
+      for i in contacts:
+        print(i,"\n")
+  elif user_choice=="search":
+    search_name=input("Enter the name to search:")
+    for n in contacts:
+      if n==search_name:
+        print(f"Found:{search_name}")
+      else:
+        print("Contact not found")
+  elif user_choice=="exit":
+    print("Thanks")
+    break
+  else:
+    print("Invalid input")
+
+#Mini-Assignment 4.7: The Simple Expense Tracker
+
+expenses =[ ]
 
 while True:
-  
-    user_choice = input("\nEnter 'add', 'view', 'remove', or 'exit': ").lower()
-
-    if user_choice == "add":
-        new_task = input("What task do you want to add? ")
-        tasks.append(new_task)
-        print(f"'{new_task}' has been added to your list.")
-
-    elif user_choice == "view":
-        print("\n--- Your To-Do List ---")
-        if not tasks: 
-            print("Your to-do list is empty.")
-        else:
-            
-            for i, task in enumerate(tasks):
-                print(f"{i + 1}. {task}")
-        print("-----------------------")
-
-    elif user_choice == "remove":
-        if not tasks:
-            print("Your list is already empty, nothing to remove.")
-        else:
-            print("Here are your current tasks:")
-            for i, task in enumerate(tasks):
-                print(f"{i + 1}. {task}")
-
-            try:
-                task_num_to_remove = int(input("Enter the number of the task to remove: "))
-               
-                if 1 <= task_num_to_remove <= len(tasks):
-                    removed_task = tasks.pop(task_num_to_remove - 1)
-                    print(f"'{removed_task}' has been removed.")
-                else:
-                    print("Invalid task number.")
-            except ValueError:
-                print("Please enter a valid number.")
-
-
-    elif user_choice == "exit":
-        print("Goodbye!")
-        break 
-
+  user_choice = input("\nEnter 'add', 'show', or 'exit': ").lower()
+  if user_choice=="add":
+    # expense_amount=float(input("Enter the amount:"))
+    try:
+      expense_amount = float(input("Enter the amount: "))
+      expenses.append(expense_amount)
+      print(f"Added expense: ${expense_amount:.2f}")
+    except ValueError:
+      print("Invalid input. Please enter a number.")
+  elif user_choice=="show":
+    if not expenses:
+      print("You have no expenses yet.")
     else:
-        print("Invalid input. Please try again.")
+      print("--- Your Expenses ---")
+      total=0
+      for i in expenses:
+        print(i)
+
+        total+=i
+      print(f"Total:${total}")
+  elif user_choice=="exit":
+    print("Goodbye!")
+    break
+  else:
+    print("Invalid input")
+
+#Mini-Assignment 5: The Student Report Card
+
+report={
+    "reports":{
+    "student_name": "Rohan",
+    "roll_number": 101},
+    "subjects":{
+              "Math": 85,
+              "Science": 92,
+              "English": 78,
+              "History": 88
+            }
+}
+print("--- REPORT CARD ---")
+print("Student Name:",report.get("student_name"))
+print("Roll Number:",report.get("roll_number"),"\n---------------------\n")
+for key,value in report.subjects.items():
+  print("c")
