@@ -258,3 +258,68 @@ Question 3: The Student Search (Challenge)
     If you find a match, print the student's name and grade (e.g., "Found Student: Vijay, Grade: 92") and stop the search.
 
     If the loop finishes and you haven't found a student with that ID, print "Student not found.".
+
+Question 1: Student Averages
+    You have a dictionary where the keys are student names and the values are another dictionary of their subject scores. Your task is to calculate the average score for each student.
+
+    Starting Code:
+
+    Python
+
+    class_grades = {
+        "Amit": {"Math": 88, "Science": 92, "History": 85},
+        "Priya": {"Math": 95, "Science": 91, "History": 93},
+        "Rahul": {"Math": 78, "Science": 82, "History": 80}
+    }
+    Task:
+    Loop through the class_grades dictionary. For each student, calculate their average score and print it out in a user-friendly format.
+
+    Expected Output:
+
+    Amit's average score is: 88.33
+    Priya's average score is: 93.00
+    Rahul's average score is: 80.00
+
+Question 2: Product Filter
+    You have a list of dictionaries, where each dictionary represents a product. Your task is to filter this list based on user input.
+
+    Starting Code:
+
+    Python
+
+    products = [
+        {"name": "Laptop", "category": "Electronics", "price": 80000},
+        {"name": "T-Shirt", "category": "Apparel", "price": 1200},
+        {"name": "Mouse", "category": "Electronics", "price": 1500},
+        {"name": "Jeans", "category": "Apparel", "price": 2500},
+        {"name": "Monitor", "category": "Electronics", "price": 15000}
+    ]
+    Task:
+
+    Ask the user to enter a category to search for (e.g., "Electronics" or "Apparel").
+
+    Loop through the products list.
+
+    Print the name and price of every product that matches the category the user entered.
+
+Question 3: Employee Raise (Challenge)
+    This problem involves modifying data within a list of dictionaries. You have a list of employees, and you need to give a raise to everyone in a specific department.
+
+    Starting Code:
+
+    Python
+
+    employees = [
+        {"id": 1, "name": "Sanjay", "department": "IT", "salary": 60000},
+        {"id": 2, "name": "Meera", "department": "HR", "salary": 50000},
+        {"id": 3, "name": "Vikram", "department": "IT", "salary": 65000}
+    ]
+    Task:
+
+    Loop through the employees list.
+
+    For each employee, check if their department is "IT".
+
+    If it is, increase their salary by 10%. (To increase by 10%, you can multiply the current salary by 1.1).
+
+    After the loop has finished, print the entire employees list to show the updated salaries.

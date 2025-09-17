@@ -144,3 +144,59 @@ print("Student Name:",report.get("student_name"))
 print("Roll Number:",report.get("roll_number"),"\n---------------------\n")
 for key,value in report.subjects.items():
   print("c")
+
+#Question 1: The User Profile Updater
+user_profile = {
+    "username": "coder_suresh",
+    "email": "suresh@example.com",
+    "location": {
+        "city": "Chennai",
+        "country": "India"
+    }
+}
+print(user_profile["location"])
+user_profile["email"]="suresh.dev@example.com"
+user_profile["skills"]=["Python", "Data Structures","SQL"]
+print(user_profile)
+
+#Question 2: The Inventory Value Calculator
+inventory = {
+    "Laptop": {"price": 80000, "quantity": 10},
+    "Mouse": {"price": 1500, "quantity": 50},
+    "Keyboard": {"price": 2500, "quantity": 30}
+}
+total=0
+add_dict1=inventory["Laptop"]
+add_dict2=inventory["Mouse"]
+add_dict3=inventory["Keyboard"]
+
+for price, quantity in add_dict1.items():
+  for price,quantity in add_dict2.items():
+    for price,quantity in add_dict3.items():
+
+      print(f"{price}:{quantity}")
+      value=price*quantity
+      
+      total+=value
+print("The total value of the inventory is:",total)
+
+#Question 3: The Student Search (Challenge)
+students = [
+    {"id": 101, "name": "Kavya", "grade": 88},
+    {"id": 102, "name": "Vijay", "grade": 92},
+    {"id": 103, "name": "Lakshmi", "grade": 75}
+]
+
+user_choice=int(input("Enter id:"))
+
+for dictionary in students:
+    print(f"Processing dictionary: {dictionary}")
+    for key, value in dictionary.items():
+        # print(f"  Key: {key}, Value: {value}")
+        cc=dictionary["id"]
+        if user_choice==cc:
+          print("Found")
+          break
+        else:
+          print("Not found")
+

@@ -126,3 +126,74 @@ print("---------------------")
 print(f"Total Marks:  {total_marks}")
 print(f"Average:      {average:.2f}%") # :.2f formats the average to 2 decimal places
 print("---------------------")
+
+#Question 1: The User Profile Updater
+
+user_profile = {
+    "username": "coder_suresh",
+    "email": "suresh@example.com",
+    "location": {
+        "city": "Chennai",
+        "country": "India"
+    }
+}
+
+# 1. Access the nested "city" key
+print(f"The user's city is: {user_profile['location']['city']}")
+
+# 2. Update the email (Your code was perfect here)
+user_profile["email"] = "suresh.dev@example.com"
+
+# 3. Add skills (Your code was perfect here too)
+user_profile["skills"] = ["Python", "Data Structures", "SQL"]
+
+# 4. Print the final result
+print("\n--- Updated Profile ---")
+print(user_profile)
+
+#Question 2: The Inventory Value Calculator
+
+inventory = {
+    "Laptop": {"price": 80000, "quantity": 10},
+    "Mouse": {"price": 1500, "quantity": 50},
+    "Keyboard": {"price": 2500, "quantity": 30}
+}
+
+total_value = 0 # Use a descriptive variable name
+
+# We only need ONE loop to go through the main inventory.
+# 'item_details' will hold the inner dictionary like {"price": 80000, "quantity": 10}
+for item, item_details in inventory.items():
+    # Access the price and quantity from the inner dictionary
+    price = item_details["price"]
+    quantity = item_details["quantity"]
+    
+    # Calculate the value for the current item and add to the total
+    value = price * quantity
+    total_value += value
+    
+print(f"The total value of the inventory is: {total_value}")
+
+#Question 3: The Student Search (Challenge)
+
+students = [
+    {"id": 101, "name": "Kavya", "grade": 88},
+    {"id": 102, "name": "Vijay", "grade": 92},
+    {"id": 103, "name": "Lakshmi", "grade": 75}
+]
+
+user_choice = int(input("Enter student id to search for: "))
+student_found = False # Our "flag" variable
+
+# ONE loop is all we need
+for student in students:
+    # Directly access the "id" key and check it
+    if student["id"] == user_choice:
+        print(f"Found Student: {student['name']}, Grade: {student['grade']}")
+        student_found = True # Set the flag to True
+        break # Exit the loop immediately since we found the student
+
+# This check happens only ONCE, after the loop is finished
+if not student_found:
+    print("Student not found.")
+    
