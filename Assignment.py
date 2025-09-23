@@ -200,3 +200,66 @@ for dictionary in students:
         else:
           print("Not found")
 
+#Question 1: Student Averages
+
+class_grades = {
+    "Amit": {"Math": 88, "Science": 92, "History": 85},
+    "Priya": {"Math": 95, "Science": 91, "History": 93},
+    "Rahul": {"Math": 78, "Science": 82, "History": 80}
+}
+value=0
+
+for name, subject_details in class_grades.items():
+   
+    sub = subject_details["Math"]
+    sub2 = subject_details["Science"]
+    
+    sub3 = subject_details["History"]
+    val=(sub+sub2+sub3)/3
+    
+    print(f"{name} average score is: {val}")
+
+#Question 2: Product Filter
+
+products = [
+    {"name": "Laptop", "category": "Electronics", "price": 80000},
+    {"name": "T-Shirt", "category": "Apparel", "price": 1200},
+    {"name": "Mouse", "category": "Electronics", "price": 1500},
+    {"name": "Jeans", "category": "Apparel", "price": 2500},
+    {"name": "Monitor", "category": "Electronics", "price": 15000}
+]
+
+user_choice = input("Enter the category to filter for: ").lower()
+
+item_found = False
+
+for item in products:
+    if item["category"].lower() == user_choice:
+        print(f"Found item: {item['name']}, Price: {item['price']}")
+        item_found = True
+      
+
+if not item_found:
+    print(f"No items found in the category '{user_choice}'.")
+
+#Question 3: Employee Raise (Challenge)
+
+employees = [
+    {"id": 1, "name": "Sanjay", "department": "IT", "salary": 60000},
+    {"id": 2, "name": "Meera", "department": "HR", "salary": 50000},
+    {"id": 3, "name": "Vikram", "department": "IT", "salary": 65000}
+]
+
+# user_choice = input("Enter the department to filter for: ").lower()
+
+department_found = False
+
+for dept in employees:
+    if dept["department"] == "IT":
+        # print(f"Found item: {item['name']}, Price: {item['price']}")
+       # item_found = True
+        increase = dept["salary"]*1.1
+        dept["salary"]=increase
+        print(f"The increment:{employees}\n")
+      
+

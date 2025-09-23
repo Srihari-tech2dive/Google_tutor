@@ -196,4 +196,45 @@ for student in students:
 # This check happens only ONCE, after the loop is finished
 if not student_found:
     print("Student not found.")
+
+#Question 1: Student Averages
+
+class_grades = {
+    "Amit": {"Math": 88, "Science": 92, "History": 85},
+    "Priya": {"Math": 95, "Science": 91, "History": 93},
+    "Rahul": {"Math": 78, "Science": 82, "History": 80}
+}
+
+for name, subjects in class_grades.items():
+    # 'subjects' is the inner dictionary, e.g., {"Math": 88, ...}
     
+    # Get all the scores from the inner dictionary's values
+    scores = subjects.values() # This will be like [88, 92, 85]
+    
+    # Calculate the total and count dynamically
+    total_marks = sum(scores)
+    num_subjects = len(scores)
+    
+    average = total_marks / num_subjects
+    
+    # Use :.2f to format the average nicely
+    print(f"{name}'s average score is: {average:.2f}")
+
+#Question 3: Employee Raise (Challenge)
+
+employees = [
+    {"id": 1, "name": "Sanjay", "department": "IT", "salary": 60000},
+    {"id": 2, "name": "Meera", "department": "HR", "salary": 50000},
+    {"id": 3, "name": "Vikram", "department": "IT", "salary": 65000}
+]
+
+# Loop through and update the salaries first
+for employee in employees:
+    if employee["department"] == "IT":
+        # This is a more concise way to increase by 10%
+        employee["salary"] *= 1.1
+
+# Now that the loop is finished, print the final result ONCE.
+print("--- Updated Employee Salaries ---")
+print(employees)  
+
